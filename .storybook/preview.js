@@ -1,17 +1,15 @@
-import { defaultTheme } from '../src/styles/stitches.config';
+import { defaltTheme } from '../src/styles/stitches.config';
 
 export const parameters = {
   multipleThemesStitches: {
     values: [
       {
         name: 'default',
-        theme: defaultTheme,
+        theme: defaltTheme,
       },
     ],
   },
-
   layout: 'centered',
-
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {

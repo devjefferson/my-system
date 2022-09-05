@@ -1,4 +1,4 @@
-import { styled } from '../../../styles/stitches.config';
+import { styled } from '@stitches/react';
 
 const Wrapper = styled('h1', {
   fontWeight: '$bold',

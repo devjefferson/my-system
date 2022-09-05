@@ -9,10 +9,12 @@ type HeadingComponentProps = {
   onContrast?: boolean;
   className?: string;
   css?: Stitches.CSS;
+  id?: string;
   children: React.ReactNode;
 };
 
 export default function Heading({
+  id,
   tag,
   className,
   size,
@@ -23,6 +25,7 @@ export default function Heading({
 }: HeadingComponentProps) {
   return (
     <Wrapper
+      id={id}
       css={css}
       as={tag}
       size={size}

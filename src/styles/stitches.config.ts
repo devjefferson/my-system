@@ -1,32 +1,43 @@
 import { createStitches } from '@stitches/react';
 
-export const gridGutter = {
-  width: 15,
-};
-
-export const {
-  styled,
-  css,
-  globalCss,
-  keyframes,
-  getCssText,
-  theme,
-  createTheme,
-  config,
-  prefix,
-  reset,
-} = createStitches({
-  // Prefix
-
-  prefix: 'stitches-style',
-
-  // Theme
+export const { createTheme, theme } = createStitches({
   theme: {
-    fonts: {
-      base: 'Arial, Helvetica, sans-serif',
-      highLight: 'Ringside Compressed',
-    },
+    colors: {
+      brandPrimaryPure: '#ED1C24',
+      brandPrimaryLight: '#FBC6CB',
+      brandPrimaryMedium: '#D51118',
+      brandPrimaryDark: '#5E080B',
 
+      brandSecondaryPure: '#BD8D28',
+      brandSecondaryLight: '#EEDAAF',
+      brandSecondaryMedium: '#976220',
+      brandSecondaryDark: '#6E4017',
+
+      accentPure: '#6339F9',
+      accentLight: '#D4C3FE',
+      accentMedium: '#3E27B0',
+      accentDark: '#2B245D',
+
+      neutralHighPure: '#FFFFFF',
+      neutralHighLight: '#F5F5F4',
+      neutralHighMedium: '#E4E3E1',
+      neutralHighDark: '#B7B2AE',
+
+      neutralLowPure: '#131211',
+      neutralLowLight: '#958F88',
+      neutralLowMedium: '#645E59',
+      neutralLowDark: '#3B3835',
+
+      statusFocusPure: '#009DF2',
+      statusFocusLight: '#B3E6F4',
+      statusFocusMedium: '#005BAE',
+      statusFocusDark: '#143971',
+
+      statusNegativePure: '#C51B62',
+      statusNegativeLight: '#FAC7D2',
+      statusNegativeMedium: '#9D0261',
+      statusNegativeDark: '#5A014A',
+    },
     fontWeights: {
       normal: 400,
       bold: 700,
@@ -135,146 +146,6 @@ export const {
       xgiant: '120px',
       xxgiant: '160px',
     },
-
-    colors: {
-      brandPrimaryPure: '#ED1C24',
-      brandPrimaryLight: '#FBC6CB',
-      brandPrimaryMedium: '#D51118',
-      brandPrimaryDark: '#5E080B',
-
-      brandSecondaryPure: '#BD8D28',
-      brandSecondaryLight: '#EEDAAF',
-      brandSecondaryMedium: '#976220',
-      brandSecondaryDark: '#6E4017',
-
-      accentPure: '#6339F9',
-      accentLight: '#D4C3FE',
-      accentMedium: '#3E27B0',
-      accentDark: '#2B245D',
-
-      neutralHighPure: '#FFFFFF',
-      neutralHighLight: '#F5F5F4',
-      neutralHighMedium: '#E4E3E1',
-      neutralHighDark: '#B7B2AE',
-
-      neutralLowPure: '#131211',
-      neutralLowLight: '#958F88',
-      neutralLowMedium: '#645E59',
-      neutralLowDark: '#3B3835',
-
-      statusFocusPure: '#009DF2',
-      statusFocusLight: '#B3E6F4',
-      statusFocusMedium: '#005BAE',
-      statusFocusDark: '#143971',
-
-      statusNegativePure: '#C51B62',
-      statusNegativeLight: '#FAC7D2',
-      statusNegativeMedium: '#9D0261',
-      statusNegativeDark: '#5A014A',
-    },
-  },
-
-  // Breakpoints
-  media: {
-    lgUp: '(min-width: 992px)',
-    lgDown: '(max-width: 991px)',
-  },
-
-  // Utils
-  utils: {
-    // Grid Col
-    gridCol: (number: number) => {
-      return {
-        flex: `0 0 ${parseFloat(((number / 12) * 100).toFixed(5))}%`,
-        maxWidth: `${parseFloat(((number / 12) * 100).toFixed(5))}%`,
-        position: 'relative',
-        width: '100%',
-        paddingRight: gridGutter.width,
-        paddingLeft: gridGutter.width,
-      };
-    },
   },
 });
-
-export const globalStyles = globalCss({
-  html: {
-    scrollBehavior: 'smooth',
-    scrollPaddingTop: '80px',
-  },
-
-  '.Toastify': {
-    fontSize: '$nano',
-    color: '$neutralLowPure',
-  },
-
-  body: {
-    fontFamily: '$base',
-    fontSize: '$medium',
-    fontWeight: '$normal',
-    backgroundColor: '$neutralHighLight',
-  },
-
-  '*': {
-    margin: 0,
-    padding: 0,
-    boxSizing: 'border-box',
-    '-webkit-font-smoothing': 'antialiased',
-    '-moz-osx-font-smoothing': 'grayscale',
-    '&::before': {
-      boxSizing: 'border-box',
-    },
-    '&::after': {
-      boxSizing: 'border-box',
-    },
-  },
-  '#nprogress .bar': {
-    background: '$brandPrimaryPure !important',
-  },
-  '#nprogress .peg': {
-    boxShadow:
-      '0 0 10px $brandPrimaryPure , 0 0 5px $brandPrimaryPure !important',
-  },
-  '#nprogress .spinner-icon': {
-    borderTopColor: '$brandPrimaryPure !important',
-    borderLeftColor: '$brandPrimaryPure !important',
-  },
-
-  '[data-hidden="onDesktop"]': {
-    '@lgUp': {
-      display: 'none !important',
-    },
-  },
-
-  '[data-hidden="onMobile"]': {
-    '@lgDown': {
-      display: 'none !important',
-    },
-  },
-
-  // Modal
-  '.ReactModalPortal': {
-    '.ReactModal__Overlay': {
-      zIndex: 9999,
-      backgroundColor: 'rgba(000, 000, 000, 0.80) !important',
-    },
-  },
-
-  '.ReactModal__Body--open': {
-    overflow: 'hidden',
-  },
-
-  '@font-face': [
-    {
-      fontFamily: 'Ringside Compressed',
-      fontWeight: 400,
-      src: 'url(/fonts/Ringside-Compressed/RingsideCompressed-Book.woff2)',
-      fontDisplay: 'swap',
-    },
-    {
-      fontFamily: 'Ringside Compressed',
-      fontWeight: 700,
-      src: 'url(/fonts/Ringside-Compressed/RingsideCompressed-Bold.woff2)',
-      fontDisplay: 'swap',
-    },
-  ],
-});
+export const defaltTheme = createTheme({});

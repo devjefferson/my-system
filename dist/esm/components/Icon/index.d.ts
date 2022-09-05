@@ -1,0 +1,40 @@
+/// <reference types="react" />
+export declare const icons: {
+    chevronLeft: import("react-icons/lib").IconType;
+    chevronRight: import("react-icons/lib").IconType;
+    chevronDown: import("react-icons/lib").IconType;
+    play: import("react-icons/lib").IconType;
+    close: import("react-icons/lib").IconType;
+    plus: import("react-icons/lib").IconType;
+    plusCircle: import("react-icons/lib").IconType;
+    minus: import("react-icons/lib").IconType;
+    minusCircle: import("react-icons/lib").IconType;
+    google: import("react-icons/lib").IconType;
+    facebook: import("react-icons/lib").IconType;
+    twitter: import("react-icons/lib").IconType;
+    instagram: import("react-icons/lib").IconType;
+    restart: import("react-icons/lib").IconType;
+    youtube: import("react-icons/lib").IconType;
+    arrowUp: import("react-icons/lib").IconType;
+    whatsApp: import("react-icons/lib").IconType;
+    alert: import("react-icons/lib").IconType;
+    menu: import("react-icons/lib").IconType;
+    qrCodeBorder: import("react-icons/lib").IconType;
+    clip: import("react-icons/lib").IconType;
+    share: import("react-icons/lib").IconType;
+    edit: import("react-icons/lib").IconType;
+    eyes: import("react-icons/lib").IconType;
+    eyesSlash: import("react-icons/lib").IconType;
+    user: import("react-icons/lib").IconType;
+    qrcode: import("react-icons/lib").IconType;
+    calendar: import("react-icons/lib").IconType;
+    camera: import("react-icons/lib").IconType;
+    search: import("react-icons/lib").IconType;
+};
+export declare type IconComponentProps = {
+    name: keyof typeof icons;
+    className?: string;
+    size?: number;
+    color?: string;
+};
+export default function IconComponent({ name, ...props }: IconComponentProps): JSX.Element;

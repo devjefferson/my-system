@@ -1,7 +1,7 @@
 {
-  "name": "casion-hnk-design-system",
-  "version": "1.0.0",
-  "description": "Casion design system for Group Heineken.",
+  "name": "my-system-design",
+  "version": "1.0.1",
+  "description": "My design system.",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
