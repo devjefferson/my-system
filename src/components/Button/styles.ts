@@ -1,6 +1,7 @@
 import { createStitches } from '@stitches/react';
+import { config } from '../../styles/stitches.config';
 
-const { styled } = createStitches({});
+const { styled } = createStitches({} as typeof config);
 
 export const Text = styled('span', {
   display: 'block',

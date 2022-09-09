@@ -1,6 +1,15 @@
 import { createStitches } from '@stitches/react';
+import type * as Stitches from '@stitches/react';
 
-export const { createTheme, theme } = createStitches({
+export const {
+  config,
+  css,
+  globalCss,
+  createTheme,
+  styled,
+  reset,
+  getCssText,
+} = createStitches({
   theme: {
     colors: {
       brandPrimaryPure: '#ED1C24',
@@ -38,6 +47,7 @@ export const { createTheme, theme } = createStitches({
       statusNegativeMedium: '#9D0261',
       statusNegativeDark: '#5A014A',
     },
+
     fontWeights: {
       normal: 400,
       bold: 700,
@@ -148,4 +158,5 @@ export const { createTheme, theme } = createStitches({
     },
   },
 });
-export const defaltTheme = createTheme({});
+
+export type CSS = Stitches.CSS<typeof config>;

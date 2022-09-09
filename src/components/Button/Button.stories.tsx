@@ -11,10 +11,26 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  text: 'oi',
+Default.args = {
+  text: 'Button',
   onContrast: false,
   iconEnd: false,
+};
+
+export const Border = Template.bind({});
+Border.args = {
+  text: 'Button',
+  onContrast: false,
+  border: true,
+};
+
+export const Icon = Template.bind({});
+Icon.args = {
+  onContrast: false,
+  text: 'Button',
+  icon: 'chevronRight',
+  iconSize: 28,
+  iconEnd: true,
 };

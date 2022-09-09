@@ -1,11 +1,25 @@
-import { defaltTheme } from '../src/styles/stitches.config';
+import { createTheme } from '../src/styles/stitches.config';
+import { Tiger, Heineken } from '../src/styles/Themes';
 
 export const parameters = {
+  layout: 'centered',
   multipleThemesStitches: {
     values: [
       {
-        name: 'default',
-        theme: defaltTheme,
+        name: 'Amstel',
+        theme: createTheme({}),
+      },
+      {
+        name: 'Heineken',
+        theme: createTheme({
+          colors: Heineken,
+        }),
+      },
+      {
+        name: 'Tiger',
+        theme: createTheme({
+          colors: Tiger,
+        }),
       },
     ],
   },
